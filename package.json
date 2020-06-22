@@ -19,5 +19,8 @@
     "homepage": "https://github.com/edazpotato/express-redirect",
     "dependencies": {
       "express.": "^4.17.1"
+    },
+    "engines": {
+      "node": "12.x"
     }
   }
