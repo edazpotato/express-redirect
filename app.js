@@ -16,3 +16,5 @@ app.get('/', function (req, res) {
     res.send("Error 404: Redirect not found");
   }
 })
+
+app.listen(process.env.PORT || 8000)
