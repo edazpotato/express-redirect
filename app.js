@@ -9,6 +9,7 @@ let redirects = [
 ];
 
 app.get('/', function (req, res) {
+let code = "no";
   if (redirects[{"code":code}]) {
     let link = redirects[{"code":code}].url;
     res.redirect(link);
