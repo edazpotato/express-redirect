@@ -1,5 +1,5 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
 
 let redirects = [
   {
@@ -10,13 +10,12 @@ let redirects = [
 
 app.get('/', function (req, res) {
 let code = "no";
-  if (redirects[{"code":code}]) {
-    let link = redirects[{"code":code}].url;
+  if (redirects.find(el => el.code === code)) {
+    let link =redirects.find(el => el.code === code).url;
     res.redirect(link);
   } else {
     res.send("Error 404: Redirect not found");
   }
-})
+});
 
-app.listen(process.env.PORT || 8000, 
-	() => console.log("Server is running..."));)
+app.listen(process.env.PORT || 80, () => console.log("Server is running..."));)
